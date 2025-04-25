@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINANCIAL BABAJI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header aria-label="Main header" class="header">
+        <div class="header-left">
+            <div class="logo" tabindex="0">
+                <img src="assets/images/logo.png.jpg" alt="Financial Babaji Logo" class="logo-image" loading="lazy">
+            </div>
+            <div class="header-title">
+                <h1>FINANCIAL BABAJI</h1>
+            </div>
+        </div>
+        <div class="header-right">
+            <button id="loginBtn" class="auth-btn" aria-label="Login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+            <button id="signupBtn" class="auth-btn" aria-label="Sign up">
+                <i class="fas fa-user-plus"></i> Sign up
+            </button>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="price-ticker" aria-label="Live Crypto Prices">
+        <div class="ticker-container" id="priceTicker" aria-live="polite">
+    <!-- Price ticker items will be dynamically inserted here -->
+</div>
+<!-- Trade Signal Badge Template (hidden, for reference) -->
+<template id="signal-badge-template">
+    <span class="trade-signal-badge signal-hold">Hold</span>
+</template>
+    </section>
+
+    <div class="filters">
+        <section class="filters" aria-label="News filters">
+            <form class="search-container" role="search" aria-label="Search news">
+                <input type="text" id="searchInput" placeholder="Search news..." aria-label="Search news">
+                <button id="searchButton" type="submit" class="search-btn">
+                    Search
+                </button>
+            </form>
+            <div class="filter-controls">
+                <select id="sourceFilter" aria-label="Filter by source">
+                    <option value="all"> </option>
+                    <option value="cryptocompare">CC</option>
+                    <option value="coindesk">CD</option>
+                    <option value="cryptopanic">CP</option>
+                </select>
+                <select id="sortFilter" aria-label="Sort news">
+                    <option value="newest"> </option>
+                    <option value="oldest"> </option>
+                </select>
+            </div>
+        </section>
+
+        <main>
+            <div class="loading-indicator" id="loadingIndicator" aria-live="polite">
+                <div class="spinner"></div>
+                <p>Loading news...</p>
+            </div>
+            <div class="news-container" id="news-container">
+                <!-- News articles will be dynamically inserted here -->
+            </div>
+            <nav class="pagination" id="pagination" aria-label="Pagination">
+                <!-- Pagination controls will be dynamically inserted here -->
+            </nav>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 <strong>FINANCIAL BABAJI</strong>. All rights reserved.</p>
+            <p>Data provided by multiple sources including <span class="footer-source">CryptoCompare</span>, <span class="footer-source">CoinDesk</span>, and <span class="footer-source">CryptoPanic</span></p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
